@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Kích Hoạt Locket Gold</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .gold-badge {
+            display: inline-block;
+            background: #FFD700;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 0.9em;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .steps {
+            margin-bottom: 30px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .step-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .note-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .note-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .note-box p {
+            color: #856404;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+        }
+
+        .download-btn i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .warning-box p {
+            color: #721c24;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .footer p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .status-box {
+            background: #e2f3e2;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .status-box.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tool-demo {
+            background: #1e1e2f;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .tool-demo .cmd-line {
+            color: #0f0;
+            margin-bottom: 10px;
+        }
+
+        .tool-demo .output {
+            color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            background: #2d2d3a;
+            border-radius: 8px;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 15px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ LOCKET GOLD UNLOCKER ✨</h1>
+            <p>Hướng dẫn kích hoạt tài khoản Locket Gold cao cấp</p>
+            <div class="gold-badge">PREMIUM TOOL - VIP ONLY</div>
+        </div>
+
+        <div class="content">
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Tải Tool Kích Hoạt</h3>
+                        <p>Tải công cụ kích hoạt Locket Gold (phiên bản dành cho máy tính Windows/Mac)</p>
+                        <a href="https://www.mediafire.com/file/rd34zpadpnmo8p5/locket_gold_by_tuquangnam_V1.exe/file" target="_blank" class="download-btn">
+                            <span>⬇️</span> Tải Tool Ngay (MediaFire)
+                        </a>
+                        <p style="font-size: 0.9em; margin-top: 10px; color: #999;">*File an toàn, đã được kiểm tra bởi admin</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Chạy Tool</h3>
+                        <p>Giải nén và chạy file <span class="highlight">locket_gold_by_tuquangnam_V1.exe</span> với quyền Administrator</p>
+                        <div class="tool-demo">
+                            <div class="cmd-line">C:\Users\Admin> locket_gold_by_tuquangnam_V1.exe</div>
+                            <div class="output">
+                                [SYSTEM] Loading tool...<br>
+                                [SUCCESS] Tool initialized!<br>
+                                [INPUT] Nhập username cần kích hoạt:
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Nhập Username</h3>
+                        <p>Nhập chính xác username Locket của bạn và nhấn <span class="highlight">Enter</span></p>
+                        <div class="tool-demo">
+                            <div class="cmd-line">→ Username: <span style="color: #ff0;">your_username</span></div>
+                            <div class="output">
+                                [QUERY] Đang tìm kiếm user...<br>
+                                [FOUND] UID: 6a7b8c9d0e1f2a3b4c5d6e7f<br>
+                                [PROCESS] Đang kích hoạt Gold...<br>
+                                <span style="color: #0f0;">[SUCCESS] Kích hoạt thành công!</span><br>
+                                <span style="color: #ff0;">[NOTE] Restart app để áp dụng thay đổi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-box">
+                <h4>📌 LƯU Ý QUAN TRỌNG</h4>
+                <p>Sau khi kích hoạt thành công, bạn <strong>BẮT BUỘC</strong> phải cài đặt mobileconfig (cấu hình) để chặn thu hồi quyền Gold.</p>
+                <a href="https://www.mediafire.com/file/27f6k8id33hfaqe/locket.mobileconfig/file" target="_blank" class="download-btn" style="background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);">
+                    <span>📱</span> Tải mobileconfig (Cấu hình chặn thu hồi)
+                </a>
+                <p style="margin-top: 15px; font-size: 0.9em;">🔹 <strong>Cách cài đặt:</strong> Tải file → Vào Cài đặt iPhone → Cài đặt chung → VPN & Quản lý thiết bị → Cài đặt cấu hình → Nhập mật khẩu → Xong</p>
+            </div>
+
+            <div class="warning-box">
+                <p>⚠️ <strong>Cảnh báo:</strong> Tool này được phát triển với mục đích học tập và nghiên cứu bảo mật. Vui lòng không sử dụng cho mục đích thương mại hoặc vi phạm điều khoản dịch vụ của Locket.</p>
+            </div>
+
+            <div class="status-box active">
+                <p>✅ <strong>TRẠNG THÁI TOOL:</strong> Đang hoạt động ổn định | Cập nhật mới nhất: 06/03/2026</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🚀 Developed & Maintained by <a href="https://fb.com/tuquangnam07" target="_blank">tuquangnam07</a></p>
+            <p>📧 Liên hệ: <a href="mailto:tuquangnamht2007@gmail.com">tuquangnamht2007@gmail.com</a></p>
+            <p style="font-size: 0.9em; margin-top: 15px;">© 2026 Locket Gold Unlocker. All rights reserved.</p>
+            <p style="font-size: 0.8em; color: #999; margin-top: 10px;">*Tool chỉ dành cho mục đích học tập, không khuyến khích sử dụng sai mục đích</p>
+        </div>
+    </div>
+
+    <script>
+        // Animation và hiệu ứng nhẹ
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hiệu ứng gõ chữ trong demo
+            const demoOutputs = document.querySelectorAll('.tool-demo .output');
+            demoOutputs.forEach(output => {
+                output.style.opacity = '0';
+                setTimeout(() => {
+                    output.style.transition = 'opacity 1s';
+                    output.style.opacity = '1';
+                }, 500);
+            });
+
+            // Thêm hiệu ứng cho step
+            const steps = document.querySelectorAll('.step');
+            steps.forEach((step, index) => {
+                step.style.animation = `slideIn 0.5s ease-out ${index * 0.2}s both`;
+            });
+
+            // Hiển thị thông báo khi click vào link tải
+            const downloadToolBtn = document.querySelector('a[href*="locket_gold"]');
+            if(downloadToolBtn) {
+                downloadToolBtn.addEventListener('click', function() {
+                    showNotification('Đang chuyển hướng đến MediaFire...', 'success');
+                });
+            }
+
+            const downloadConfigBtn = document.querySelector('a[href*="mobileconfig"]');
+            if(downloadConfigBtn) {
+                downloadConfigBtn.addEventListener('click', function() {
+                    showNotification('Đang tải cấu hình chặn thu hồi...', 'success');
+                });
+            }
+        });
+
+        // Function hiển thị thông báo
+        function showNotification(message, type) {
+            const statusBox = document.querySelector('.status-box');
+            statusBox.innerHTML = `<p>${type === 'success' ? '✅' : '⚠️'} <strong>${message}</strong></p>`;
+            statusBox.classList.add('active');
+            setTimeout(() => {
+                statusBox.classList.remove('active');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
